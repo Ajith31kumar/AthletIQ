@@ -1,0 +1,58 @@
+#homePage {
+    width: 100%;
+    padding: 0 7vw;
+    box-sizing: border-box;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: right;
+    align-items: center;
+}
+
+#homePage > .homeTitle {
+    justify-self: left;
+    display: flex;
+    gap: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: left;
+}
+
+.homeTitle > h1 {
+    font-size: 3.5vw;
+    margin: 0;
+}
+
+.homeTitle > h2 {
+    font-size: 2vw;
+    margin: 0;
+}
+
+.homeTitle > img {
+    
+  width: 100%;
+  height: auto;
+}
+
+#homePage .fact {
+    font-size: 1vw;
+}
+
+#homePage .fact > p {
+    font-size: 1vw;
+}
+
+
+#homePage .fact span {
+    font-weight: 700;
+    color: greenyellow;
+}
+
+#homePage .flowchartContainer {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

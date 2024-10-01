@@ -1,0 +1,87 @@
+#form {
+    background-color: #202566;
+    width: 36vw;
+    height: 70vh;
+    padding: 3vh 3vw;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: relative;
+}
+
+.formSubmitted {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formSubmitted > h1 {
+    color: white;
+    font-size: 2vw;
+}
+
+.formContainer > h1 {
+    color: white;
+    font-size: 2vw;
+    text-align: left;
+}
+
+#form .adjacent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    
+}
+
+#form .adjacent > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#form .complete {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#form input {
+    background: transparent;    
+    height: 4vh;
+    padding: 1vh 1vw;
+    box-sizing: border-box;
+    border: 1px solid #828282; 
+    color: white;
+    border-radius: 5px;
+    width: 30vw;
+}
+
+#form .adjacent > div > input {
+    width: 14vw;
+}
+
+#form h6 {
+    text-align: left;
+    color: white;
+    font-size: 0.9vw;
+}
+
+button {
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5vh;
+    width: 15vw;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+}
+
+button:hover {
+    background: none;
+    border: 2px solid white;
+    color: white;
+}

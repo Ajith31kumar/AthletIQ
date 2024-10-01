@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "Name": "Measure",
+            "Color": "#FF6F61" 
+        },
+        {
+            "Name": "Analyse",
+            "Color": "#FFB046" 
+        },
+        {
+            "Name": "Communicate",
+            "Color": "#0066CC" 
+        },
+        {
+            "Name": "Practice",
+            "Color": "#6B8E23" 
+        },
+        {
+            "Name": "Improve",
+            "Color": "#8A2BE2" 
+        }
+    ]
+}

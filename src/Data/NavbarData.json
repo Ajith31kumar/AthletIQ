@@ -1,0 +1,50 @@
+[
+    {
+      "id": "about",
+      "label": "About",
+      "link": "/about"
+    },
+    {
+      "id": "team",
+      "label": "Team",
+      "link": "/team"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "subItems": [
+        {
+          "id": "cricket",
+          "label": "Eyeris Cricket",
+          "link": "/products/cricket"
+        },
+        {
+          "id": "football",
+          "label": "Eyeris Football",
+          "link": "/products/football"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "subItems": [
+        {
+          "id": "eyeris",
+          "label": "Eyeris",
+          "link": "/services/eyeris"
+        }
+      ]
+    },
+    {
+      "id": "Testimonials",
+      "label": "Testimonials",
+      "link": "/testimonials"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "link": "/contact"
+    }
+  ]
+  

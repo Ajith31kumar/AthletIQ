@@ -1,0 +1,21 @@
+#teamPage {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#teamPage > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    #teamPage > div {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10%;
+    }
+}

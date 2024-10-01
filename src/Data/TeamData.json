@@ -1,0 +1,26 @@
+{
+    "team": [
+        
+        {
+            "Name": "Ashwin",
+            "Title": "COO",
+            "src": "/Images/ash.jpg",
+            "alt": "Ashwin COO",
+            "desc": " A proven leader in product strategy and solution Engineering delivering high-value and scalable results across competitive markets. Ashwin excels at driving innovative solutions in the SaaS space."
+        },
+        {
+            "Name": "Vevek",
+            "Title": "CEO",
+            "src": "/Images/vevek.jpg",
+            "alt": "Vevek CEO",
+            "desc": "Lorem ipsum dolor sit amet. Vel consequuntur dignissimos vel nulla quia At delectus aperiam in beatae modi id sint quam. Aut ratione esse sit dolore aliquam et dolorum ducimus ad sunt consequuntur. A impedit sunt aut libero tempore in eius voluptatem aut quaerat deleniti?"
+        },
+        {
+            "Name": "Hari",
+            "Title": "CTO",
+            "src": "/Images/ash.jpg",
+            "alt": "Hari CTO",
+            "desc": "Lorem ipsum dolor sit amet. Vel consequuntur dignissimos vel nulla quia At delectus aperiam in beatae modi id sint quam. Aut ratione esse sit dolore aliquam et dolorum ducimus ad sunt consequuntur. A impedit sunt aut libero tempore in eius voluptatem aut quaerat deleniti?"
+        }
+    ]
+}

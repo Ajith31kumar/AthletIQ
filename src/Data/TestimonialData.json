@@ -1,0 +1,26 @@
+{
+    "testimonails":
+    [
+        {
+            "name": "Ashwin",
+            "src": "/Images/ash.jpg",
+            "alt": "testimonails",
+            "testimonail": "Ut nihil accusamus hic dolorum incidunt et nihil fuga ea debitis omnis. Sit perspiciatis repellat et molestiae debitis et voluptas nesciunt. Est officiis eius ut magni repellat vel autem itaque. Nam praesentium galisum qui quia explicabo quo sunt rerum eos illo enim et autem quidem!",
+            "desc": "3rd Division Cricketer"
+        },
+        {
+            "name": "Vevek",
+            "src": "/Images/vevek.jpg",
+            "alt": "testimonails",
+            "testimonail": "Ut nihil accusamus hic dolorum incidunt et nihil fuga ea debitis omnis. Sit perspiciatis repellat et molestiae debitis et voluptas nesciunt. Est officiis eius ut magni repellat vel autem itaque. Nam praesentium galisum qui quia explicabo quo sunt rerum eos illo enim et autem quidem!",
+            "desc": "3rd Division Cricketer"
+        },
+        {
+            "name": "Shreyas",
+            "src": "/Images/ash.jpg",
+            "alt": "testimonails",
+            "testimonail": "Ut nihil accusamus hic dolorum incidunt et nihil fuga ea debitis omnis. Sit perspiciatis repellat et molestiae debitis et voluptas nesciunt. Est officiis eius ut magni repellat vel autem itaque. Nam praesentium galisum qui quia explicabo quo sunt rerum eos illo enim et autem quidem!",
+            "desc": "3rd Division Cricketer"
+        }
+    ]
+}

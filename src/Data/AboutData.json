@@ -1,0 +1,42 @@
+{
+    "about": [
+        {
+            "title": "MEASURE",
+            "description": [
+                "Comprehensive evaluation for each athlete",
+                "Key metrics determining human potential are measured and correlated with current performance",
+                "Use of state-of-the-art technology to gather data like Visual acuity, Hand-eye coordination and Reaction time",
+                "Tailored assessments create a detailed profile of current capabilities",
+                "Establishes a clear baseline to guide a personalized development plan"],
+            "icon": "FaMagnifyingGlassChart",  
+            "color": "#FF6B6B",
+            "video": "/Video/test.mp4"
+        },
+        {
+            "title": "TRAIN",
+            "description": [
+                "Athletes build on the established foundation",
+                "Engage in advanced techniques and specialized drills",
+                "Focus on refining skills and elevating performance levels",
+                "Boost inherent potential through targeted training",
+                "Ensure readiness for top-tier competition"
+            ],
+            "icon": "GiWeightLiftingUp", 
+            "color": "#4ECDC4",
+            "video": "/Video/train.mp4"
+        },
+        {
+            "title": "IMPROVE",
+            "description": [
+                "Athletes are tested in real-world scenarios",
+                "Performance is closely monitored based on on-field results",
+                "Targeted adjustments and tweaks are made to the training regimen",
+                "Iterative process ensures the baseline is accentuated",
+                "Leads to optimal performance and readiness for future challenges"
+            ],
+            "icon": "PiTarget",
+            "color": "#3bf56c",
+            "video": "/Video/goal.mp4"
+        }
+    ]
+}

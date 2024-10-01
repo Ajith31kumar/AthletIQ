@@ -1,0 +1,147 @@
+#aboutPage {
+    min-height: 80vh;
+    padding-bottom: 5vh;
+}
+
+#aboutPage > h1{
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 70px;
+}
+
+#aboutPage > .about{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.process-box {
+    width: 25vw;
+    height: 100%;
+    padding: 2vw;
+    box-sizing: border-box;
+    text-align: justify;
+    border: 2px solid;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    position: relative;
+    background-color: black;
+}
+
+.process-box:hover {
+    transform: translateY(-10px);
+}
+
+.process-box .icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.process-box > .textContainer > h3 {
+    margin: 0;
+    padding: 2vh 1vw;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    z-index: 10;
+}
+
+.process-box > .textContainer {
+    position: relative;
+    z-index: 10;
+    width: calc(25vw - 4vw - 4px);
+    min-height: 100%
+}
+
+
+.process-box > .textContainer > ul > li {
+    font-size: 1.2vw;
+    color: white;
+    z-index: 10;
+    font-weight: 400;
+    text-align: left;
+    padding: 1vh;
+}
+
+
+.process-box > .bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(25vw - 4px);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(25vw - 4px);
+    height: 100%;
+    border-radius: 15px;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+#aboutPage > .numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding-bottom: 100px;
+    position: relative;
+    color: white;
+}
+
+#aboutPage > .numbers > div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutPage > .numbers > div > h1 {
+    font-size: 40px;
+    color: black;
+}
+
+#aboutPage > .numbers > .round1 {
+    background-color: #FF6B6B;
+}
+
+#aboutPage > .numbers > .round2 {
+    background-color: #4ECDC4;
+}#aboutPage > .numbers > .round3 {
+    background-color: #3bf56c;
+}
+
+.arrow1 {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    font-size: 50px;
+}
+.arrow2 {
+    position: absolute;
+    top: 25%;
+    left: 66%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    font-size: 50px;
+}

@@ -1,0 +1,27 @@
+.flowchart {
+  width: 20vw;
+  z-index: 10;
+}
+
+.flowchart {
+  
+  position: relative;
+}
+
+.flowchart > div{
+  height: 100%;
+  width: 20vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flowchart .video{
+  width: 45%;
+  height: 45%;
+  object-fit: cover; /* Ensure the video covers the container */
+  border-radius: 50%;
+}

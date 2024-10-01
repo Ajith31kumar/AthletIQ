@@ -1,0 +1,90 @@
+.teamCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.teamCard > img {
+    height: 40%;
+    border-radius: 50%;
+}
+
+.teamCard  h1 {
+    margin: 0;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.teamCard h3 {
+    margin: 0;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.teamCard p {
+    font-size: 18px;
+}
+
+
+@media only screen and (min-width:  1200px) {
+    
+    .teamCard  h1 {
+        font-size: 40px;
+    }
+
+    .teamCard h3 {
+        font-size: 25px;
+    }
+
+    .teamCard p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .teamCard  h1 {
+        font-size: 30px;
+    }
+
+    .teamCard h3 {
+        font-size: 20px;
+    }
+
+    .teamCard p {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .teamCard {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+    .teamCard  h1 {
+        font-size: 30px;
+    }
+
+    .teamCard h3 {
+        font-size: 20px;
+    }
+
+    .teamCard p {
+        font-size: 15px;
+    }
+}
