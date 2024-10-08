@@ -4,27 +4,27 @@
     height: 15vh;
     margin: 0;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     padding: 5vh 7vw;
     box-sizing: border-box;
     position: relative;
 }
 
-
+/* Navbar Logo */
 #navbar img {
-
-    height: 20vh;
+    height: 10vh;
 }
 
+/* Navbar Links */
 #navbar > .navLinks {
     width: 90%;
     display: flex;
     gap: 7.5%;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 500;
     list-style-type: none;
     text-decoration: none;
@@ -40,6 +40,7 @@
     text-decoration: none;
 }
 
+/* Dropdown Menu */
 #navbar .dropdown {
     position: absolute;
     top: 100%;
@@ -52,41 +53,91 @@
     background-color: #eeeef0;
     box-shadow: 5px 5px 5px black;
     display: flex;
+    justify-content: space-evenly;
     gap: 5vw;
-} 
+    padding: 2vh 0;
+    transition: all 0.3s ease;
+}
 
-#navbar .dropdown > ul{
+/* Styling for Products and Services List */
+#navbar .dropdown > ul {
     color: #060153;
     list-style-type: none;
     text-decoration: none;
     text-align: left;
-}
-
-#navbar .dropdown > ul a{
-    color: #060153;
-}
-
-#navbar .dropdown > ul > li {
-    margin-left: 1vw;
-    line-height: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
 }
 
 #navbar .dropdown > ul > .title {
     margin: 2vh 0;
     font-weight: 700;
     letter-spacing: 1px;
+    text-align: center;
 }
 
-a:hover {
-    opacity: 0.5;
+/* Info Box for Products and Services */
+.product-info, .service-info {
+    position: absolute;
+    top: 0;
+    left: 15%; /* Positioned next to the product/service list item */
+    background-color: #eeeef0;
+    padding: 10px;
+    width: auto; /* Auto width for dynamic content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: none; /* Hidden by default */
+    flex-direction: row; /* Changed from column to row */
+    align-items: flex-start;
+    gap: 10px; /* Gap between image and description */
 }
 
-#navbar > .navLinks > li:hover {
-    opacity: 0.5;
+/* Image Styling for Products and Services */
+.product-info img, .service-info img {
+    width: 150px; /* Adjust the image width to fit beside the description */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove margin to align with text */
 }
 
-#navbar .dropdown > ul a:hover {
-    text-decoration: underline;
-    opacity: 1;
-    color: #000000;
-}   
+/* Text Styling for Product and Service Descriptions */
+.product-info p, .service-info p {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 200px; /* Set a max-width to control the text flow */
+}
+
+/* Show the product or service info box when hovering */
+.sub-products li:hover .product-info, 
+.sub-services li:hover .service-info {
+    display: flex; /* Display as flex to show image and description side by side */
+}
+
+/* Hover effect for both products and services */
+#navbar .dropdown > ul > li:hover, #navbar .dropdown:hover {
+    background-color: #d9d9d9;
+    transition: background-color 0.3s ease;
+}
+
+/* Sub-product and sub-service list */
+.sub-products, .sub-services {
+    display: none;
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+li:hover .sub-products, li:hover .sub-services {
+    display: block;
+}
+
+.sub-products li, .sub-services li {
+    margin: 5px 0;
+    position: relative;
+}

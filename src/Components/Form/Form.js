@@ -5,29 +5,32 @@ import axios from "axios";
 export default function Form() {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+    // const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [contactNumber, setContactNumber] = useState("");
-    const [companyName, setCompanyName] = useState("");
+    // const [companyName, setCompanyName] = useState("");
 
-    async function sendData () {
-        const response = await axios.post("http://localhost:5000/api/form", {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            contactNumber: contactNumber,
-            companyName: companyName
-        });
-        console.log(response)
-        if (response.data.success === true) {
-            setFormSubmitted(true);
-        } else {
-            alert("Oops there was an error ",response.message)
+    async function sendData() {
+        try {
+            const response = await axios.post("http://localhost:5000/api/form/submit", {
+                firstName,
+                // lastName,
+                email,
+                contactNumber,
+                // companyName
+            });
+            if (response.data.success === true) {
+                setFormSubmitted(true);
+            } else {
+                alert("Oops, there was an error: " + response.data.message);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("An error occurred: " + (error.response?.data?.message || error.message));
         }
     }
-
     const onClick = () => {
-        if (!firstName || !lastName || !email || !contactNumber || !companyName) {
+        if (!firstName ||!email || !contactNumber) {
             alert("Please enter all the details")
         } else {
             sendData();
@@ -45,7 +48,7 @@ export default function Form() {
                     <h1>Get In Touch</h1>
                     <div className="adjacent">
                         <div>
-                            <h6>First Name</h6>
+                            <h6>Enter your Name</h6>
                             <input 
                                 type="text" 
                                 placeholder="Enter your first name"
@@ -53,7 +56,7 @@ export default function Form() {
                                 onChange={(e) => setFirstName(e.target.value)}
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <h6>Last Name</h6>
                             <input 
                                 type="text" 
@@ -61,7 +64,7 @@ export default function Form() {
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                             />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="complete">
                         <h6>Email</h6>
@@ -82,7 +85,7 @@ export default function Form() {
                                 onChange={(e) => setContactNumber(e.target.value)}
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <h6>Company Name</h6>
                             <input 
                                 type="text" 
@@ -90,7 +93,7 @@ export default function Form() {
                                 value={companyName}
                                 onChange={(e) => setCompanyName(e.target.value)}
                             />
-                        </div>
+                        </div> */}
                     </div>
                     <button onClick={onClick}>Submit</button>
                 </div>

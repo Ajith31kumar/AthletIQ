@@ -6,21 +6,15 @@
             "Title": "COO",
             "src": "/Images/ash.jpg",
             "alt": "Ashwin COO",
-            "desc": " A proven leader in product strategy and solution Engineering delivering high-value and scalable results across competitive markets. Ashwin excels at driving innovative solutions in the SaaS space."
+            "desc": " A proven leader in product strategy and solution engineering, Ashwin delivers high-value, scalable results across competitive markets. He excels at driving innovative SaaS solutions, aligning product vision with market needs, and fostering cross-functional collaboration. Known for creating customer-centric solutions that drive measurable business impact while maintaining operational efficiency."
         },
         {
             "Name": "Vevek",
             "Title": "CEO",
             "src": "/Images/vevek.jpg",
             "alt": "Vevek CEO",
-            "desc": "Lorem ipsum dolor sit amet. Vel consequuntur dignissimos vel nulla quia At delectus aperiam in beatae modi id sint quam. Aut ratione esse sit dolore aliquam et dolorum ducimus ad sunt consequuntur. A impedit sunt aut libero tempore in eius voluptatem aut quaerat deleniti?"
-        },
-        {
-            "Name": "Hari",
-            "Title": "CTO",
-            "src": "/Images/ash.jpg",
-            "alt": "Hari CTO",
-            "desc": "Lorem ipsum dolor sit amet. Vel consequuntur dignissimos vel nulla quia At delectus aperiam in beatae modi id sint quam. Aut ratione esse sit dolore aliquam et dolorum ducimus ad sunt consequuntur. A impedit sunt aut libero tempore in eius voluptatem aut quaerat deleniti?"
+            "desc": "Vevek is a visionary in human performance measurement, with a passion for developing cutting-edge solutions that assess and unlock human potential. Vevek has consistently driven innovation in the field, creating scalable and impactful tools that measure performance across various age groups. Dedicated to becoming the best human capabilities, Vevek strives to deliver high-value results in the realm of human potential."
         }
+ 
     ]
 }
