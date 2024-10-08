@@ -70,7 +70,7 @@
 
 button {
     position: absolute;
-    bottom: 3vh;
+    bottom: 2vh;
     left: 50%;
     transform: translateX(-50%);
     height: 5vh;

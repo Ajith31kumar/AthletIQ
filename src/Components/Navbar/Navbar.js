@@ -4,10 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
     const [activeItem, setActiveItem] = useState(null);
-    const [hoveredProduct, setHoveredProduct] = useState(null); // Track the hovered product for showing details
-    const [hoveredService, setHoveredService] = useState(null); // Track the hovered service for showing details
-    const [hoveredSubProduct, setHoveredSubProduct] = useState(null); // Track the hovered sub-product
-    const [hoveredSubService, setHoveredSubService] = useState(null); // Track the hovered sub-service
     const location = useLocation(); // Hook to access the current route location
 
     const navClicked = (id) => () => {
@@ -45,7 +41,7 @@ export default function Navbar() {
                     id: "arjuna",
                     name: "Arjuna's Eye",
                     description: "Arjuna's Eye is designed to test and enhance visual skills, focus, and precision. This product leverages advanced technology to assess and improve your ability to different visual stimuli, benchmarking your numbers with similar group. The product also focuses optionally on helping you sharpen your sight and achieve greater accuracy in fast-paced environments.",
-                    image: "/images/Arjun.png"
+                    image: "/images/Arjuna.png"
                 },
                 {
                     id: "bheema",
@@ -90,6 +86,60 @@ export default function Navbar() {
         }
     ];
 
+    const openNewTabWithContent = (item) => {
+        const newWindow = window.open('', '_blank');
+        newWindow.document.write(`
+            <html>
+                <head>
+                    <title>${item.name}</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            padding: 50px;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: flex-start;
+                            background-color: #060153;
+                            height: 100vh;
+                            box-sizing: border-box;
+                            color: white;
+                        }
+                        .image-container {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 20%;
+                            text-align: center;
+                        }
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: contain;
+                        }
+                        h1 {
+                            font-size: 36px;
+                            color: white;
+                            margin-bottom: 20px;
+                            text-align: center;
+                        }
+                        p {
+                            font-size: 16px;
+                            margin-top: 10px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>${item.name}</h1>
+                    <div class="image-container">
+                        <img src="${item.image}" alt="${item.name}">
+                        <p>${item.description}</p>
+                    </div>
+                </body>
+            </html>
+        `);
+        newWindow.document.close();
+    };
+
     return (
         <div id="navbar">
             <div className="imageContainer">
@@ -105,29 +155,17 @@ export default function Navbar() {
                         <ul>
                             <li className="title">PRODUCTS</li>
                             {products.map(product => (
-                                <li key={product.id}
-                                    onMouseEnter={() => setHoveredProduct(product)}
-                                    onMouseLeave={() => setHoveredProduct(null)}
-                                >
+                                <li key={product.id}>
                                     <span>{product.name}</span>
-                                    {hoveredProduct?.id === product.id && (
-                                        <ul className="sub-products">
-                                            {product.subProducts.map(subProduct => (
-                                                <li key={subProduct.id}
-                                                    onMouseEnter={() => setHoveredSubProduct(subProduct)}
-                                                    onMouseLeave={() => setHoveredSubProduct(null)}
-                                                >
-                                                    <span>{subProduct.name}</span>
-                                                    {hoveredSubProduct?.id === subProduct.id && (
-                                                        <div className="product-info">
-                                                            <img src={subProduct.image} alt={subProduct.name} />
-                                                            <p>{subProduct.description}</p>
-                                                        </div>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                    <ul className="sub-products">
+                                        {product.subProducts.map(subProduct => (
+                                            <li key={subProduct.id}
+                                                onClick={() => openNewTabWithContent(subProduct)} // Open new tab with product details
+                                            >
+                                                <span>{subProduct.name}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </li>
                             ))}
                         </ul>
@@ -135,29 +173,17 @@ export default function Navbar() {
                         <ul>
                             <li className="title">SERVICES</li>
                             {services.map(service => (
-                                <li key={service.id}
-                                    onMouseEnter={() => setHoveredService(service)}
-                                    onMouseLeave={() => setHoveredService(null)}
-                                >
+                                <li key={service.id}>
                                     <span>{service.name}</span>
-                                    {hoveredService?.id === service.id && (
-                                        <ul className="sub-services">
-                                            {service.subServices.map(subService => (
-                                                <li key={subService.id}
-                                                    onMouseEnter={() => setHoveredSubService(subService)}
-                                                    onMouseLeave={() => setHoveredSubService(null)}
-                                                >
-                                                    <span>{subService.name}</span>
-                                                    {hoveredSubService?.id === subService.id && (
-                                                        <div className="service-info">
-                                                            <img src={subService.image} alt={subService.name} />
-                                                            <p>{subService.description}</p>
-                                                        </div>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
+                                    <ul className="sub-services">
+                                        {service.subServices.map(subService => (
+                                            <li key={subService.id}
+                                                onClick={() => openNewTabWithContent(subService)} // Open new tab with service details
+                                            >
+                                                <span>{subService.name}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </li>
                             ))}
                         </ul>

@@ -97,7 +97,7 @@
 
 /* Image Styling for Products and Services */
 .product-info img, .service-info img {
-    width: 150px; /* Adjust the image width to fit beside the description */
+    width: 50px; /* Adjust the image width to fit beside the description */
     height: auto;
     border-radius: 10px;
     margin-bottom: 0; /* Remove margin to align with text */
@@ -141,3 +141,41 @@ li:hover .sub-products, li:hover .sub-services {
     margin: 5px 0;
     position: relative;
 }
+.new-window-body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Vertically align to the top */
+    gap: 30px; /* Adds space between the image and description */
+    background-color: #f0f0f0; /* Light grey background color */
+    height: 100vh; /* Set height to fill the viewport */
+    box-sizing: border-box; /* Ensure padding doesn't break the layout */
+}
+
+.new-window-img {
+    max-width: 30%; /* Set image to take up to 30% of the width */
+    height: auto;
+    object-fit: contain; /* Ensure image is contained within bounds */
+}
+
+.new-window-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%; /* Restrict content area to 60% of the width */
+}
+
+.new-window-h1 {
+    font-size: 36px; /* Large font size for the title */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.new-window-p {
+    font-size: 200px; /* Large font size for description */
+    color: #555;
+    line-height: 1.6; /* Improved spacing between lines */
+    word-wrap: break-word; /* Ensure long words wrap properly */
+}
+
+

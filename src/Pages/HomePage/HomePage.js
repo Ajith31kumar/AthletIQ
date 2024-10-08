@@ -15,7 +15,9 @@ export default function HomePage() {
                     <Flowchart />
                 </div>
                 <div className="fact">
-                <h2>Unleash your potential, raise the bar – for athletes and teams striving for excellence</h2>
+                    
+                <h2> Unleash your potential, raise the bar – for athletes and teams striving for excellence</h2>
+                <h2> Did You Know? 💡 </h2>
                     <p>With advanced training methods, reflexes can be enhanced to an impressive 200 milliseconds. At Athletiq, we’re dedicated to advancing performance development, providing customized solutions that drive excellence for individuals, teams, schools, clubs, colleges, and academies.</p>    
                 </div>
             </div>
