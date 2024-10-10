@@ -1,3 +1,4 @@
+/* Navbar Container */
 #navbar {
     color: white;
     width: 100%;
@@ -78,104 +79,98 @@
     text-align: center;
 }
 
-/* Info Box for Products and Services */
-.product-info, .service-info {
-    position: absolute;
-    top: 0;
-    left: 15%; /* Positioned next to the product/service list item */
-    background-color: #eeeef0;
-    padding: 10px;
-    width: auto; /* Auto width for dynamic content */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    display: none; /* Hidden by default */
-    flex-direction: row; /* Changed from column to row */
-    align-items: flex-start;
-    gap: 10px; /* Gap between image and description */
-}
-
-/* Image Styling for Products and Services */
-.product-info img, .service-info img {
-    width: 50px; /* Adjust the image width to fit beside the description */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 0; /* Remove margin to align with text */
-}
-
-/* Text Styling for Product and Service Descriptions */
-.product-info p, .service-info p {
-    font-size: 14px;
-    color: #333;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    max-width: 200px; /* Set a max-width to control the text flow */
-}
-
-/* Show the product or service info box when hovering */
-.sub-products li:hover .product-info, 
-.sub-services li:hover .service-info {
-    display: flex; /* Display as flex to show image and description side by side */
-}
-
-/* Hover effect for both products and services */
-#navbar .dropdown > ul > li:hover, #navbar .dropdown:hover {
-    background-color: #d9d9d9;
-    transition: background-color 0.3s ease;
-}
-
 /* Sub-product and sub-service list */
 .sub-products, .sub-services {
-    display: none;
     list-style-type: none;
     margin-top: 10px;
     padding: 0;
 }
 
-li:hover .sub-products, li:hover .sub-services {
-    display: block;
-}
-
 .sub-products li, .sub-services li {
     margin: 5px 0;
     position: relative;
+    cursor: pointer;
 }
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background-color: #f0f0f0;
+}
+
+.carousel-slide {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-slide p {
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Styling for Links and Hover Effects */
+#navbar .dropdown > ul > li > span {
+    font-weight: bold;
+}
+
+#navbar .dropdown > ul > li > ul > li > span {
+    font-weight: normal;
+}
+
+#navbar .dropdown > ul > li > ul > li:hover > span {
+    text-decoration: underline;
+}
+
+/* Adjustments for the New Window Styles */
 .new-window-body {
     font-family: Arial, sans-serif;
     padding: 50px;
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    align-items: flex-start; /* Vertically align to the top */
-    gap: 30px; /* Adds space between the image and description */
-    background-color: #f0f0f0; /* Light grey background color */
-    height: 100vh; /* Set height to fill the viewport */
-    box-sizing: border-box; /* Ensure padding doesn't break the layout */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #f0f0f0;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .new-window-img {
-    max-width: 30%; /* Set image to take up to 30% of the width */
+    max-width: 30%;
     height: auto;
-    object-fit: contain; /* Ensure image is contained within bounds */
+    object-fit: contain;
 }
 
 .new-window-content {
     display: flex;
     flex-direction: column;
-    max-width: 60%; /* Restrict content area to 60% of the width */
+    max-width: 60%;
 }
 
 .new-window-h1 {
-    font-size: 36px; /* Large font size for the title */
+    font-size: 36px;
     color: #333;
     margin-bottom: 20px;
 }
 
 .new-window-p {
-    font-size: 200px; /* Large font size for description */
+    font-size: 16px;
     color: #555;
-    line-height: 1.6; /* Improved spacing between lines */
-    word-wrap: break-word; /* Ensure long words wrap properly */
+    line-height: 1.6;
+    word-wrap: break-word;
 }
-
 

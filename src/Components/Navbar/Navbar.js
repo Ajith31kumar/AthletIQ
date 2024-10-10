@@ -34,111 +34,152 @@ export default function Navbar() {
 
     const products = [
         {
-            id: "mindscape",
+            id: "arjuna",
             name: "MINDSCAPE (ASSESSMENT TOOL)",
-            subProducts: [
-                {
-                    id: "arjuna",
-                    name: "Arjuna's Eye",
-                    description: "Arjuna's Eye is designed to test and enhance visual skills, focus, and precision. This product leverages advanced technology to assess and improve your ability to different visual stimuli, benchmarking your numbers with similar group. The product also focuses optionally on helping you sharpen your sight and achieve greater accuracy in fast-paced environments.",
-                    image: "/images/Arjuna.png"
-                },
-                {
-                    id: "bheema",
-                    name: "Bheema's Strength",
-                    description: "Bheema's Strength focuses on measuring strength, stamina and endurance. This product provides detailed insights into your physical capacity, helping you track your progress and build greater strength across all age groups.",
-                    image: "/images/bheema.png"
-                },
-                {
-                    id: "chanakya",
-                    name: "Chanakya's Wisdom",
-                    description: "Chanakya's Wisdom is crafted to assess cognitive abilities, including memory, pattern recognition, and strategic thinking. This product helps individuals unlock their mental potential, enhancing decision-making skills and boosting overall cognitive performance.",
-                    image: "/images/C.png"
-                },
-                {
-                    id: "karna",
-                    name: "Karna's Aim",
-                    description: "Karna's Aim is built to refine hand-eye coordination and precision. With this product, you can train and measure your ability to finese, improving your reaction time and coordination skills for better performance in any activity requiring focus and accuracy.",
-                    image: "/images/karnan.png"
-                }
+            images: [
+                { src: "/images/Arjuna.png", name: "Arjuna", description: "Arjuna's Eye is designed to test and enhance visual skills, focus, and precision. This product leverages advanced technology to assess and improve your ability to respond to different visual stimuli, benchmarking your numbers with a similar group." },
+                { src: "/images/karnan.png", name: "Karna", description: "Karna's Aim is built to refine hand-eye coordination and precision. With this product, you can train and measure your ability to refine focus, improving your reaction time and coordination." },
+                { src: "/images/C.png", name: "Chanakya", description: "Chanakya's Wisdom is crafted to assess cognitive abilities, including memory, pattern recognition, and strategic thinking. This product helps individuals unlock their mental potential, enhancing decision-making skills and boosting overall cognitive performance." },
+                { src: "/images/bheema.png", name: "Bheema", description: "Bheema's Strength focuses on measuring strength, stamina and endurance. This product provides detailed insights into your physical capacity, helping you track your progress and build greater strength across all age groups." }
             ]
         }
     ];
 
     const services = [
         {
-            id: "mindboost",
-            name: "MINDBOOST (TRAINING PROGRAM)",
-            subServices: [
-                {
-                    id: "mindboost-pro",
-                    name: "MINDBOOST PRO (TRAINING PROGRAM)",
-                    description: "MINDBOOST PRO helps enhance mental clarity and cognitive performance.",
-                    image: "/images/eye12.png"
-                },
-                {
-                    id: "eyeq-vision-freedom",
-                    name: "EYEQ VISION FREEDOM (TRAINING PROGRAM)",
-                    description: "EYEQ VISION FREEDOM is designed to improve vision and eliminate corrective lenses.",
-                    image: "/images/eye34.png"
-                }
+            id: "mindboost-pro",
+            name: "MINDBOOST PRO (TRAINING PROGRAM)",
+            description: "MINDBOOST PRO helps enhance mental clarity and cognitive performance.",
+            images: [
+                { src: "/images/eye12.png", name: "Mindboost Pro", description: "MINDBOOST PRO focuses on mental clarity and cognitive performance." },
+                { src: "/images/eye34.png", name: "EYEQ Vision Freedom", description: "EYEQ Vision Freedom helps improve vision and eliminate corrective lenses." }
             ]
         }
     ];
-
     const openNewTabWithContent = (item) => {
         const newWindow = window.open('', '_blank');
         newWindow.document.write(`
             <html>
                 <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <title>${item.name}</title>
                     <style>
                         body {
                             font-family: Arial, sans-serif;
-                            padding: 50px;
                             display: flex;
-                            justify-content: space-around;
-                            align-items: flex-start;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
                             background-color: #060153;
                             height: 100vh;
-                            box-sizing: border-box;
+                            margin: 0;
+                            padding: 0;
                             color: white;
                         }
-                        .image-container {
+    
+                        .carousel-container {
+                            position: relative;
+                            width: 900px;
+                            height: 600px;
                             display: flex;
-                            flex-direction: column;
+                            justify-content: center;
                             align-items: center;
-                            width: 20%;
-                            text-align: center;
+                            perspective: 1000px;
                         }
-                        img {
+    
+                        .carousel-slide {
+                            position: absolute;
+                            width: 250px;
+                            height: 400px;
+                            opacity: 0.5;
+                            transition: transform 1s ease, opacity 1s ease;
+                            transform: scale(0.8);
+                        }
+    
+                        .carousel-slide img {
                             width: 100%;
-                            height: auto;
-                            object-fit: contain;
+                            height: 300px;
+                            border-radius: 15px;
+                            object-fit: cover;
                         }
-                        h1 {
-                            font-size: 36px;
-                            color: white;
-                            margin-bottom: 20px;
+    
+                        .carousel-slide.active {
+                            transform: scale(1.2);
+                            opacity: 1;
+                            z-index: 10;
+                        }
+    
+                        .carousel-slide.left {
+                            transform: translateX(-300px) scale(0.8);
+                        }
+    
+                        .carousel-slide.right {
+                            transform: translateX(300px) scale(0.8);
+                        }
+    
+                        .image-name {
+                            margin-bottom: 10px;
+                            font-size: 24px;
                             text-align: center;
+                            color: white;
                         }
-                        p {
-                            font-size: 16px;
-                            margin-top: 10px;
+    
+                      .description {
+                            margin-top: 20px;
+                            font-size: 20px;
+                            text-align: center;
+                            line-height: 1.4;
+                            max-width: 600px;
+                            color: #ddd;
+                            font-weight: bold; /* This makes the text bold */
                         }
+
                     </style>
                 </head>
                 <body>
-                    <h1>${item.name}</h1>
-                    <div class="image-container">
-                        <img src="${item.image}" alt="${item.name}">
-                        <p>${item.description}</p>
+                    <div class="carousel-container" id="carousel">
+                        ${item.images.map((image, index) => `
+                            <div class="carousel-slide ${index === 0 ? 'active' : index === 1 ? 'left' : 'right'}">
+                                <p class="image-name">${image.name}</p> <!-- Name above the image -->
+                                <img src="${image.src}" alt="${image.name}">
+                            </div>
+                        `).join('')}
                     </div>
+    
+                    <p class="description">${item.images[0].description}</p>
+    
+                    <script>
+                        let slideIndex = 0;
+                        const slides = document.querySelectorAll('.carousel-slide');
+                        const totalSlides = slides.length;
+                        const descriptions = ${JSON.stringify(item.images.map(image => image.description))};
+                        const descriptionElement = document.querySelector('.description');
+    
+                        function showNextSlide() {
+                            slides.forEach(slide => slide.classList.remove('active', 'left', 'right'));
+    
+                            // Update the slide index
+                            slideIndex = (slideIndex + 1) % totalSlides;
+    
+                            // Update the classes for active, left, and right slides
+                            slides[slideIndex].classList.add('active');
+                            slides[(slideIndex - 1 + totalSlides) % totalSlides].classList.add('left');
+                            slides[(slideIndex + 1) % totalSlides].classList.add('right');
+    
+                            // Update the description for the active image
+                            descriptionElement.textContent = descriptions[slideIndex];
+                        }
+    
+                        // Auto-slide every 3 seconds
+                        setInterval(showNextSlide, 3000);
+                    </script>
                 </body>
             </html>
         `);
         newWindow.document.close();
     };
+    
+    
 
     return (
         <div id="navbar">
@@ -152,38 +193,26 @@ export default function Navbar() {
 
                 {activeItem === "offerings" && (
                     <div className="dropdown">
+                        {/* MINDSCAPE Section */}
                         <ul>
-                            <li className="title">PRODUCTS</li>
+                            <li className="title">products</li>
                             {products.map(product => (
                                 <li key={product.id}>
-                                    <span>{product.name}</span>
-                                    <ul className="sub-products">
-                                        {product.subProducts.map(subProduct => (
-                                            <li key={subProduct.id}
-                                                onClick={() => openNewTabWithContent(subProduct)} // Open new tab with product details
-                                            >
-                                                <span>{subProduct.name}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <span onClick={() => openNewTabWithContent(product)}>
+                                        {product.name}
+                                    </span>
                                 </li>
                             ))}
                         </ul>
 
+                        {/* MINDBOOST Section */}
                         <ul>
-                            <li className="title">SERVICES</li>
+                            <li className="title">SERVICE</li>
                             {services.map(service => (
                                 <li key={service.id}>
-                                    <span>{service.name}</span>
-                                    <ul className="sub-services">
-                                        {service.subServices.map(subService => (
-                                            <li key={subService.id}
-                                                onClick={() => openNewTabWithContent(subService)} // Open new tab with service details
-                                            >
-                                                <span>{subService.name}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <span onClick={() => openNewTabWithContent(service)}>
+                                        {service.name}
+                                    </span>
                                 </li>
                             ))}
                         </ul>
